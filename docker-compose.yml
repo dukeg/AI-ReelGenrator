@@ -1,0 +1,12 @@
+services:
+  ai-reel-system:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./input_images:/app/input_images
+      - ./reels:/app/reels
+      - ./data:/app/data
+      - ./captions:/app/captions
+    env_file:
+      - .env
